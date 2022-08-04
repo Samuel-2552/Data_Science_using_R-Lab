@@ -37,3 +37,11 @@ Syntax: our.text = c(“item1”, “item2”, ‘item3’)
 If the data you require are not numerical, you simply use quotes to differentiate them from numbers. 
 There is no difference between using single and double quotes; R converts them all to double.
 If you mix text and numbers, the entire data object becomes a text variable and the numbers are converted to text.
+
+# Using scan() command:
+
+Syntax: our.data = scan()
+
+# Getting Text as Input:
+
+Syntax: our.data = scan(what = 'character')
