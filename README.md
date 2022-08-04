@@ -32,3 +32,8 @@ You can incorporate existing data objects with values to make new ones simply by
 
 Syntax: our.text = c(“item1”, “item2”, ‘item3’)
 
+![image](https://user-images.githubusercontent.com/104893913/182777338-92ddba78-aa12-4314-a37f-2c2a053eca9d.png)
+
+If the data you require are not numerical, you simply use quotes to differentiate them from numbers. 
+There is no difference between using single and double quotes; R converts them all to double.
+If you mix text and numbers, the entire data object becomes a text variable and the numbers are converted to text.
