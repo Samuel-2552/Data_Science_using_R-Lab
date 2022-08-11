@@ -42,6 +42,22 @@ If you mix text and numbers, the entire data object becomes a text variable and 
 
 Syntax: our.data = scan()
 
+![image](https://user-images.githubusercontent.com/104893913/184069261-c8a21ac6-a928-4689-88b2-b6a4452bba44.png)
+
+When using the c() command, typing all those commas to separate the values can be a bit tedious. 
+You can use another command, scan(), to do a similar job. Unlike the c() command you do not insert the values in the parentheses but use empty parentheses. 
+The command then prompts you to enter your data.
+Once you press the Enter key you will be prompted to enter your data.
+Next you can enter the values with space and press enter and again enter the values.
+The data entry process is finished by pressing Enter on the blank line; R then reminds you how many data items were typed in as part of this scan() command.
+
 # Getting Text as Input:
 
 Syntax: our.data = scan(what = 'character')
+
+![image](https://user-images.githubusercontent.com/104893913/184073957-cc080b5a-ed8f-44ae-b2e9-710a783abdb0.png)
+
+You can enter text using the scan() command, but if you simply enter your items in quotes you will get an error message. 
+You need to modify the command slightly.
+You must tell R to expect that the items typed in are characters, not numbers; to do this you add the what = ‘character’ part in the parentheses. 
+Note that character is in quotes. Once the command runs it operates in an identical manner as before.
