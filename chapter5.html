@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Chapter 4: KNN</title>
+	<title>Chapter 5: Naive Baye's</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
@@ -131,59 +131,44 @@
 
 	<section id="content" class="page-internal">
 		<div class="columns3 center">
-			<h1><b>Chapter 4: KNN</b></h1>
+			<h1><b>Chapter 5: Naive Baye's</b></h1>
 		</div>
 		<br><br><br>
 		<div class="columns3" style="border: 1px solid black;">
 			<div class="container">
 				<div class="mySlides">
-				  <div class="numbertext">1 / 10</div>
-				  <img src="chapter4/1.png" style="width:100%">
+				  <div class="numbertext">1 / 7</div>
+				  <img src="chapter5/1.png" style="width:100%">
 				</div>
 			  
 				<div class="mySlides">
-				  <div class="numbertext">2 / 10</div>
-				  <img src="chapter4/2.png" style="width:100%">
+				  <div class="numbertext">2 / 7</div>
+				  <img src="chapter5/2.png" style="width:100%">
 				</div>
 			  
 				<div class="mySlides">
-				  <div class="numbertext">3 / 10</div>
-				  <img src="chapter4/3.png" style="width:100%">
+				  <div class="numbertext">3 / 7</div>
+				  <img src="chapter5/3.png" style="width:100%">
 				</div>
 				  
 				<div class="mySlides">
-				  <div class="numbertext">4 / 10</div>
-				  <img src="chapter4/4.png" style="width:100%">
+				  <div class="numbertext">4 / 7</div>
+				  <img src="chapter5/4.png" style="width:100%">
 				</div>
 			  
 				<div class="mySlides">
-				  <div class="numbertext">5 / 10</div>
-				  <img src="chapter4/5.png" style="width:100%">
+				  <div class="numbertext">5 / 7</div>
+				  <img src="chapter5/5.png" style="width:100%">
 				</div>
 				  
 				<div class="mySlides">
-				  <div class="numbertext">6 / 10</div>
-				  <img src="chapter4/6.png" style="width:100%">
+				  <div class="numbertext">6 / 7</div>
+				  <img src="chapter5/6.png" style="width:100%">
 				</div>
 
 				<div class="mySlides">
-				  <div class="numbertext">7 / 10</div>
-				  <img src="chapter4/7.png" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-				  <div class="numbertext">8 /10</div>
-				  <img src="chapter4/8.png" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-				  <div class="numbertext">9 / 10</div>
-				  <img src="chapter4/9.png" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-				  <div class="numbertext">10 / 10</div>
-				  <img src="chapter4/10.png" style="width:100%">
+				  <div class="numbertext">7 / 7</div>
+				  <img src="chapter5/7.png" style="width:100%">
 				</div>
 				  
 				<a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -195,43 +180,34 @@
 			  
 				<div class="row">
 				  <div class="column">
-					<img class="demo cursor" src="chapter4/1.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+					<img class="demo cursor" src="chapter5/1.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
 				  </div>
 				  <div class="column">
-					<img class="demo cursor" src="chapter4/2.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+					<img class="demo cursor" src="chapter5/2.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
 				  </div>
 				  <div class="column">
-					<img class="demo cursor" src="chapter4/3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+					<img class="demo cursor" src="chapter5/3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
 				  </div>
 				  <div class="column">
-					<img class="demo cursor" src="chapter4/4.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+					<img class="demo cursor" src="chapter5/4.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
 				  </div>
 				  <div class="column">
-					<img class="demo cursor" src="chapter4/5.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+					<img class="demo cursor" src="chapter5/5.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
 				  </div>    
 				  <div class="column">
-					<img class="demo cursor" src="chapter4/6.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+					<img class="demo cursor" src="chapter5/6.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
 				  </div>
 				  <div class="column">
-					<img class="demo cursor" src="chapter4/7.png" style="width:100%" onclick="currentSlide(7)" alt="Snowy Mountains">
-				  </div>
-				  <div class="column">
-					<img class="demo cursor" src="chapter4/8.png" style="width:100%" onclick="currentSlide(8)" alt="Snowy Mountains">
-				  </div>
-				  <div class="column">
-					<img class="demo cursor" src="chapter4/9.png" style="width:100%" onclick="currentSlide(9)" alt="Snowy Mountains">
-				  </div>
-				  <div class="column">
-					<img class="demo cursor" src="chapter4/10.png" style="width:100%" onclick="currentSlide(10)" alt="Snowy Mountains">
+					<img class="demo cursor" src="chapter5/7.png" style="width:100%" onclick="currentSlide(7)" alt="Snowy Mountains">
 				  </div>
 				</div>
 			  </div>
 		</div>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<img src="chapter4/Example.png" style="vertical-align: middle;" width="970px"/>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<img src="chapter5/Example.png" style="vertical-align: middle;" width="970px"/>
 		<br><br>
-		<iframe src="https://www.kaggle.com/embed/samueljoseph502/breast-cancer-r?kernelSessionId=105715984"
-		 height="1500" style="margin: 0 auto; width: 101%; max-width: 970px;" frameborder="5" scrolling="auto" title="Breast_Cancer_R"></iframe>
+		<iframe src="https://www.kaggle.com/embed/samueljoseph502/spam-ham-r?kernelSessionId=107312737"
+		 height="1500" style="margin: 0 auto; width: 101%; max-width: 970px;" frameborder="5" scrolling="auto" title="Spam_Ham_R"></iframe>
 	</section>
 	<script>
 		let slideIndex = 1;
