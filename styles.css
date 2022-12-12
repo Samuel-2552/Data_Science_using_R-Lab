@@ -1,0 +1,327 @@
+/* HTML & CSS BOOK STYLE SHEET */
+@charset "UTF-8";
+
+/***************************/
+/*       TYPOGRAPHY        */
+/***************************/
+
+@font-face {
+    font-family: 'QuicksandBook';
+    src: url('/fonts/Quicksand/Quicksand_Book-webfont.eot');
+    src: url('/fonts/Quicksand/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Quicksand/Quicksand_Book-webfont.woff') format('woff'),
+         url('/fonts/Quicksand/Quicksand_Book-webfont.ttf') format('truetype'),
+         url('/fonts/Quicksand/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: 'QuicksandBold';
+    src: url('/fonts/Quicksand/Quicksand_Bold-webfont.eot');
+    src: url('/fonts/Quicksand/Quicksand_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Quicksand/Quicksand_Bold-webfont.woff') format('woff'),
+         url('/fonts/Quicksand/Quicksand_Bold-webfont.ttf') format('truetype'),
+         url('/fonts/Quicksand/Quicksand_Bold-webfont.svg#QuicksandBold') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+
+body {font-family:Arial, Helvetica, sans-serif;}
+
+a {text-decoration:none;}
+.center {text-align:center;}
+
+header, footer, h1, h2, h3 {font-family:QuicksandBook, Arial, Helvetica, sans-serif; font-weight:normal;}
+#standfirst, .list-heading {font-family:Arial, Helvetica, sans-serif; font-weight:normal;}
+code, pre {font-family:"Courier New", Courier, monospace;}
+code {font-weight:bold;}
+
+html, body {font-size:100%;}
+h1 {font-size:240%; text-transform:uppercase;}
+h2 {font-size:110%;}
+.extras h2 {font-size:180%;}
+h4 {font-size:100%; font-weight:normal;}
+p, ul {font-size:80%; line-height:1.4em;}
+footer a, #wiley-logo, .tool .chapter-ref, .newsletter, pre, .extra-content td {font-size:75%;}
+
+footer {text-transform:uppercase;}
+#welcome-text {line-height:1.3em; margin-bottom:10px;}
+#standfirst {line-height:1.5em; }
+.list-description {line-height:1.8em;}
+
+
+nav {
+	text-align:right;
+	text-transform:uppercase;
+	font-size:75%;}
+
+nav a {
+	line-height:15px;}
+
+dfn {font-style:italic;}
+
+/***************************/
+/*     COLORS : LAYOUT     */
+/***************************/
+body {background-color:#eeeceb;}
+header {background-color:#3d3a37;}
+section#attractor {background-color:#fff;}
+#content {background-color:#eeeceb;}
+nav a {color:#fff;}
+nav a.current {color:#e2764a;}
+nav a:hover {color:#fff; border-bottom:1px solid #fff;}
+nav a.current:hover {color:#e2764a; border-bottom:1px solid #fff;}
+footer {border-top:1px solid #999;}
+.chapter {background-color:#ffffff;}
+pre, .escape-codes .columns1, .escape-codes .columns2 td {background-color:#ffffff;}
+header {
+	-moz-box-shadow: 0 0 12px -2px #000;
+	-webkit-box-shadow: 0 0 12px -2px #000;
+	box-shadow: 0 0 12px -2px #000;}
+
+/***************************/
+/*      COLORS : TEXT      */
+/***************************/
+body, footer a, .tool a {color:#3d3a37;}
+a, h1, .extras h2, .soon {color:#e2764a;}
+a:hover {color:#ab5a3b;}
+.chapter a:hover {color:#3d3a37;}
+a .chapter-ref {color:#999999;}
+#welcome-text {color:#000;}
+.byline {color:#666666;}
+
+/***************************/
+/*         LAYOUT          */
+/***************************/
+body {
+	padding:0px;
+	margin:0px;}
+
+section, header, footer, aside {
+	display:block;}
+
+header {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:60px;
+	z-index:50;}
+
+footer {
+	clear:both;
+	width:940px;
+	margin:0px auto 0px auto;}
+
+nav {
+	width:380px;
+	float:right;
+	margin:24px 0px 19px 0px;
+	z-index:70;}
+
+#attractor {
+	clear:both;
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:400px;
+	margin-top:60px;
+	text-align:center;
+	z-index:5;}
+
+#slideshow {
+	position:relative;
+	top:0px;
+	left:0px;
+	width:1000px;
+	height:400px;
+	overflow:hidden;
+    margin:0px auto 0px auto;}
+
+#logo {
+	margin:19px 0px 19px 0px;}
+
+.page, .page-internal {
+	width:960px; 
+	margin:0px auto 0px auto;}
+
+.page-internal {
+	clear:both;
+	margin-top:140px;}
+
+.push1 {
+	margin-left:320px;}
+.push2 {
+	margin-left:640px;}
+
+.columns1, .columns2, .columns3, .header1, .header2, .header3 {
+	float:left;
+	margin:0px 10px 0px 10px;} 
+
+.columns1 {width:300px;}
+.columns2 {width:620px;}
+.columns3 {width:960px;}
+
+.header1 {width:380px;}
+.header2 {width:140px;}
+.header3 {width:380px;}
+
+.column3right {
+	width:300px;
+	float:right;
+	margin: 0px 10px 30px 10px;}
+
+.chapter, .tool {
+	height:200px;
+	margin-bottom:20px;}
+
+.tool {
+	width:270px;
+	float:left;
+	height:170px;
+	margin:0px 10px 20px 10px;
+	padding:15px;}
+
+
+header .center {padding-top:8px;}
+#overview {position:relative; top:-50px;}
+
+h1 {margin:0px 0px 30px 0px;}
+h4 {margin-bottom:5px;}
+.tool p {margin:0px;}
+.chapter h1 {margin:70px 0px 0px 0px;}
+li {margin-bottom:1em;}
+nav a {margin-left:10px; padding-bottom:4px;}
+footer a {margin-right:14px;}
+.sample-code-chapters {text-align:right;}
+.sample-code-chapters a, span.current-chapter {margin-left:10px;}
+.sample-code-chapters p {margin:0px;}
+.sample-code-links ul, .image2columns {margin-bottom:30px;}
+.bottom {}
+pre {padding:10px;}
+.clear {clear:both;}
+.extras h2 {border-bottom:1px solid #3d3a37;}
+.extra-content td {padding:3px;}
+.sample-chapter .columns1 {
+	padding-bottom:20px;}
+#standfirst {margin-top:10px;}
+.footer-links {width:470px; float:left;}
+
+.feature-list {margin:10px 0px 0px 0px;}
+.feature-list li {margin-bottom:10px;}
+.list-heading {margin:4px 0px 0px 20px;}
+.list-description {margin:10px 0px 10px 20px;}
+
+#tweet {
+	width:60px;
+	padding-top:22px;
+	float:right;}
+#facebook {
+	width:300px;
+	padding-top:22px;
+	float:right;}
+
+label.newsletter {
+	display:none;}
+
+#newsletter-signup {
+	margin-bottom:20px;
+	float:right;
+	width:195px;}
+	
+.newsletter-email {
+	border:1px solid #cdcbca;
+	height:12px;
+	padding:3px;
+	width:160px !important;
+	float:left;}
+
+.newsletter-email:focus {
+	background-color:#fff;
+	outline:none;}
+
+#newsletter-subscribe {
+	background-image:url("../images/subscribe.gif");
+	display:inline;
+	background-repeat:no-repeat;
+	width:26px !important;
+	height:20px;
+	float:left;
+	overflow:hidden;
+	border:none;
+	text-indent:-9999px;}
+
+#newsletter-subscribe:hover {
+	background-position:0px -20px;}
+
+
+/***************************/
+/*    ROLLOVER BUTTONS     */
+/***************************/
+
+a img {border:none;}
+
+.chapter, .tool {background-image:url(../images/chapter-frame.gif);}
+
+.home-link-buttons .columns1 {
+	position:relative;
+	top:-25px;
+	z-index:45;}
+
+a#sample-chapter-button {
+	position:relative;
+	display:block;
+	width:230px;
+	height:54px;
+	background-image:url(../images/sample-chapter.png);
+	overflow:hidden;
+	text-indent:-9999px;
+	z-index:45;}
+
+a#sample-chapter-button:hover {
+	background-position:0px -54px;}
+
+a#buy-circle-100 {
+	position:relative;
+	top:-29px;
+	left:220px;
+	display:block;
+	width:110px;
+	height:110px;
+	background-image:url(../images/buy-circle-100x100.png);
+	text-indent:-9999px;
+	z-index:45;}
+
+a#buy-circle-100:hover {
+	background-position:0px -110px;}
+
+.columns2 a#buy-circle-100 {
+	left:0px;}
+
+
+a#download-circle-100 {
+	display:block;
+	width:100px;
+	height:100px;
+	margin:0px auto 0px auto;
+	background-image:url(../images/download-circle-100x100.png);
+	text-indent:-9999px;}
+
+a#download-circle-100:hover {
+	background-position:0px -100px;}
+
+a#back {
+	display:block;
+	width:60px;
+	height:60px;
+	background-image:url(../images/back.png);
+	text-indent:-9999px;}
+
+a#back:hover {
+	background-position:0px -60px;}
+
+
+#wiley-badge {
+	position:relative;
+	top:15px;}
