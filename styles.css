@@ -241,7 +241,7 @@ label.newsletter {
 	outline:none;}
 
 #newsletter-subscribe {
-	background-image:url("../images/subscribe.gif");
+	background-image:url("/images/subscribe.gif");
 	display:inline;
 	background-repeat:no-repeat;
 	width:26px !important;
@@ -261,7 +261,7 @@ label.newsletter {
 
 a img {border:none;}
 
-.chapter, .tool {background-image:url(..images/chapter-frame.gif);}
+.chapter, .tool {background-image:url('images/chapter-frame.gif');}
 
 .home-link-buttons .columns1 {
 	position:relative;
@@ -273,7 +273,7 @@ a#sample-chapter-button {
 	display:block;
 	width:230px;
 	height:54px;
-	background-image:url(..images/sample-chapter.png);
+	background-image:url('images/sample-chapter.png');
 	overflow:hidden;
 	text-indent:-9999px;
 	z-index:45;}
@@ -288,7 +288,7 @@ a#buy-circle-100 {
 	display:block;
 	width:110px;
 	height:110px;
-	background-image:url(..images/buy-circle-100x100.png);
+	background-image:url('images/buy-circle-100x100.png');
 	text-indent:-9999px;
 	z-index:45;}
 
@@ -304,7 +304,7 @@ a#download-circle-100 {
 	width:100px;
 	height:100px;
 	margin:0px auto 0px auto;
-	background-image:url(..images/download-circle-100x100.png);
+	background-image:url('images/download-circle-100x100.png');
 	text-indent:-9999px;}
 
 a#download-circle-100:hover {
@@ -314,7 +314,7 @@ a#back {
 	display:block;
 	width:60px;
 	height:60px;
-	background-image:url(..images/back.png);
+	background-image:url('images/back.png');
 	text-indent:-9999px;}
 
 a#back:hover {
