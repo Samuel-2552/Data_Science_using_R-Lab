@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chapter 1: Basics in R</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<style>
+	body {
+	  font-family: Arial;
+	  margin: 0;
+	}
+	
+	* {
+	  box-sizing: border-box;
+	}
+	
+	img {
+	  vertical-align: middle;
+	}
+	
+	/* Position the image container (needed to position the left and right arrows) */
+	.container {
+	  position: relative;
+	}
+	
+	/* Hide the images by default */
+	.mySlides {
+	  display: none;
+	}
+	
+	/* Add a pointer when hovering over the thumbnail images */
+	.cursor {
+	  cursor: pointer;
+	}
+	
+	/* Next & previous buttons */
+	.prev,
+	.next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 40%;
+	  width: auto;
+	  padding: 16px;
+	  margin-top: -50px;
+	  color: rgb(24, 21, 21);
+	  font-weight: bold;
+	  font-size: 20px;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	  -webkit-user-select: none;
+	}
+	
+	/* Position the "next button" to the right */
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+	
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover,
+	.next:hover {
+	  background-color: rgba(0, 0, 0, 0.8);
+	}
+	
+	/* Number text (1/3 etc) */
+	.numbertext {
+	  color: #f2f2f2;
+	  font-size: 12px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  top: 0;
+	}
+	
+	/* Container for image text */
+	.caption-container {
+	  text-align: center;
+	  background-color: #222;
+	  padding: 2px 16px;
+	  color: white;
+	}
+	
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	/* Six columns side by side */
+	.column {
+	  float: left;
+	  width: 16.66%;
+	}
+	
+	/* Add a transparency effect for thumnbail images */
+	.demo {
+	  opacity: 0.6;
+	}
+	
+	.active,
+	.demo:hover {
+	  opacity: 1;
+	}
+</style>
+<body>
+
+	<header>
+		<div class="page">
+			<div class="header1"><h1 style="margin:9px 0px 10px 0px;font-family: 'Sofia', sans-serif;
+                font-size: 30px;
+                text-shadow: 3px 3px 3px #ababab;
+                font-variant: small-caps;">DSR by Samuel</h1></div>
+			<div class="header2 center">
+				<img src="images/diamond.png" alt="" width="100" height="100" class="png" />
+            </div>
+			<div class="header3">
+			  <nav>
+                <a href="index.html">Topics</a>
+            	<a href="coming.html">Code</a>
+				<a href="coming.html">Datasets</a>
+                <a href="coming.html">Coming Soon</a>
+            	<!--<a href="/extras/">Extras &amp; Tools</a>
+            	<a href="/buy/">BUY</a>-->
+              </nav>
+			</div>
+        </div><!-- .page -->
+    </header>
+
+	<section id="content" class="page-internal">
+		<div class="columns3 center">
+			<h1><b>Chapter 1: Basics in R</b></h1>
+		</div>
+		<br><br><br>
+		<h2><b>R Basic Commands:</b></h2>
+        <img src="https://user-images.githubusercontent.com/104893913/182770859-c7068f71-9a7c-40db-a10a-2b7862dab1f7.png" 
+        style="vertical-align: middle;border: 1px solid black;" width="970px"/>
+        <br>
+        <h2><b>Mathematical Operations in R:</b></h2>
+        <img src="https://user-images.githubusercontent.com/104893913/182770976-b3fdd6e2-23bd-43ff-9be3-54d01373df19.png" 
+        style="vertical-align: middle;border: 1px solid black;" width="970px"/><img/>
+        <p>R uses radians rather than degrees so multiply the result by 180 divided by π.</p>
+        <br>
+        <h2><b>Assigning Values to Variables:</b></h2>
+        <p>Syntax: object.name = mathematical.expression</p>
+        <img src="https://user-images.githubusercontent.com/104893913/182773756-72a5c041-97b3-459f-aec4-8111d75e9bbb.png" 
+        style="vertical-align: middle;border: 1px solid black;" width="970px"/><img/>
+        <p>In these examples the '=' sign is used and in some '<-' symbol is used ,this is more flexible than the = sign because you can reverse the direction of the arrow.</p>
+        <br>
+        <h2><b>Using combine(c) Command:</b></h2>
+        <p>Syntax: sample.name = c(item.1, item.2, item.3, item.n)</p>
+        <img src="https://user-images.githubusercontent.com/104893913/182775952-a905d918-2245-412a-be48-383505a5294c.png" 
+        style="vertical-align: middle;border: 1px solid black;" width="970px"/><img/>
+        <p>The simplest way to create a sample is to use the c() command. Everything in the parentheses is joined up to make a single item.
+            When you get larger samples and more values, the display may well take up more than one line of the display, and R provides a number at the beginning of each row so you can see “how far along” you are.
+            You can incorporate existing data objects with values to make new ones simply by incorporating them  as if they were values themselves.</p>
+        <br>
+        <h2><b>Text Items as Data:</b></h2>
+        <p>Syntax: our.text = c(“item1”, “item2”, ‘item3’)</p>
+        <img src="https://user-images.githubusercontent.com/104893913/182777338-92ddba78-aa12-4314-a37f-2c2a053eca9d.png" 
+        style="vertical-align: middle;border: 1px solid black;" width="970px"/><img/>
+        <p>If the data you require are not numerical, you simply use quotes to differentiate them from numbers. 
+            There is no difference between using single and double quotes; R converts them all to double.
+            If you mix text and numbers, the entire data object becomes a text variable and the numbers are converted to text.</p>
+        <br>
+        <h2><b>Using scan() command:</b></h2>
+        <p>Syntax: our.data = scan()</p>
+        <img src="https://user-images.githubusercontent.com/104893913/184069261-c8a21ac6-a928-4689-88b2-b6a4452bba44.png" 
+        style="vertical-align: middle;border: 1px solid black;" width="970px"/><img/>
+        <br>
+	</section>
+	<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("demo");
+		  let captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+</body>
+</html>
