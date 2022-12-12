@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chapter 9: Regression Trees</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<style>
+	body {
+	  font-family: Arial;
+	  margin: 0;
+	}
+	
+	* {
+	  box-sizing: border-box;
+	}
+	
+	img {
+	  vertical-align: middle;
+	}
+	
+	/* Position the image container (needed to position the left and right arrows) */
+	.container {
+	  position: relative;
+	}
+	
+	/* Hide the images by default */
+	.mySlides {
+	  display: none;
+	}
+	
+	/* Add a pointer when hovering over the thumbnail images */
+	.cursor {
+	  cursor: pointer;
+	}
+	
+	/* Next & previous buttons */
+	.prev,
+	.next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 40%;
+	  width: auto;
+	  padding: 16px;
+	  margin-top: -50px;
+	  color: rgb(24, 21, 21);
+	  font-weight: bold;
+	  font-size: 20px;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	  -webkit-user-select: none;
+	}
+	
+	/* Position the "next button" to the right */
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+	
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover,
+	.next:hover {
+	  background-color: rgba(0, 0, 0, 0.8);
+	}
+	
+	/* Number text (1/3 etc) */
+	.numbertext {
+	  color: #f2f2f2;
+	  font-size: 12px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  top: 0;
+	}
+	
+	/* Container for image text */
+	.caption-container {
+	  text-align: center;
+	  background-color: #222;
+	  padding: 2px 16px;
+	  color: white;
+	}
+	
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	/* Six columns side by side */
+	.column {
+	  float: left;
+	  width: 16.66%;
+	}
+	
+	/* Add a transparency effect for thumnbail images */
+	.demo {
+	  opacity: 0.6;
+	}
+	
+	.active,
+	.demo:hover {
+	  opacity: 1;
+	}
+</style>
+<body>
+
+	<header>
+		<div class="page">
+			<div class="header1"><h1 style="margin:9px 0px 10px 0px;font-family: 'Sofia', sans-serif;
+                font-size: 30px;
+                text-shadow: 3px 3px 3px #ababab;
+                font-variant: small-caps;">DSR by Samuel</h1></div>
+			<div class="header2 center">
+				<img src="images/diamond.png" alt="" width="100" height="100" class="png" />
+            </div>
+			<div class="header3">
+			  <nav>
+                <a href="index.html">Topics</a>
+            	<a href="coming.html">Code</a>
+				<a href="coming.html">Datasets</a>
+                <a href="coming.html">Coming Soon</a>
+            	<!--<a href="/extras/">Extras &amp; Tools</a>
+            	<a href="/buy/">BUY</a>-->
+              </nav>
+			</div>
+        </div><!-- .page -->
+    </header>
+
+	<section id="content" class="page-internal">
+		<div class="columns3 center">
+			<h1><b>Chapter 9: Regression Trees</b></h1>
+		</div>
+		<br><br><br>
+		<div class="columns3" style="border: 1px solid black;">
+			<div class="container">
+				<div class="mySlides">
+				  <div class="numbertext">1 / 4</div>
+				  <img src="chapter9/1.png" style="width:100%">
+				</div>
+			  
+				<div class="mySlides">
+				  <div class="numbertext">2 / 4</div>
+				  <img src="chapter9/2.png" style="width:100%">
+				</div>
+			  
+				<div class="mySlides">
+				  <div class="numbertext">3 / 4</div>
+				  <img src="chapter9/3.png" style="width:100%">
+				</div>
+				  
+				<div class="mySlides">
+				  <div class="numbertext">4 / 4</div>
+				  <img src="chapter9/4.png" style="width:100%">
+				</div>
+				  
+				<a class="prev" onclick="plusSlides(-1)">❮</a>
+				<a class="next" onclick="plusSlides(1)">❯</a>
+			  
+				<div class="caption-container">
+				  <p id="caption"></p>
+				</div>
+			  
+				<div class="row">
+				  <div class="column">
+					<img class="demo cursor" src="chapter9/1.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+				  </div>
+				  <div class="column">
+					<img class="demo cursor" src="chapter9/2.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+				  </div>
+				  <div class="column">
+					<img class="demo cursor" src="chapter9/3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+				  </div>
+				  <div class="column">
+					<img class="demo cursor" src="chapter9/4.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+				  </div>
+				</div>
+			  </div>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<img src="chapter9/Example.png" style="vertical-align: middle;border: 1px solid black;" width="970px"/>
+		<br><br>
+		<iframe src="https://www.kaggle.com/embed/samueljoseph502/quality-wines-r?kernelSessionId=113659856"
+		 height="1500" style="margin: 0 auto; width: 101%; max-width: 970px;" frameborder="5" scrolling="auto" title="Quality_Wines_R"></iframe>
+	</section>
+	<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("demo");
+		  let captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+</body>
+</html>
